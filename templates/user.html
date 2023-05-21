@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Users{% endblock %}
+{% block head %}
+<meta name="google-site-verification" content="vEbV0WZSWs9CZ07SYB4UOnThM8C8aHP4rV3N4_vEVOQ" />
+  {{ super() }}
+{% endblock %}
+{% block content %}
+  <h1>Login</h1>
+  <p>Type your Discord name in the box below and press <b>Submit</b> to link with the bot.</p>
+  <p><b>NOTE:</b> Please do <b>NOT</b> use your Discord password. Choose a <b>DIFFERENT</b> password</p>
+      <p><b>Ex.</b> ImaRealPerson#7380</p>
+      <form action = "{{ url_for('addrec') }}" method = "POST">
+         <h3>Eternal Games <br>
+         <sub class ="required">required *</sub></h3>
+         <sub class ="required">{{ msg }}</sub></h3><br>
+         Discord Name <small class ="required"> *</small><br>
+         <input type = "text" name = "dn" /></br>     
+         Password <small class ="required"> *</small><br>
+         <input type = "text" name = "di" /><br>
+         <input type = "submit" value = "submit" /><br></br>
+      </form>     
+   <script src="{{ url_for('static', filename='site.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Work{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #000000; }
+    .automatic { color: #FFFFFF; }
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>Work</h1>
+  <p class="important">
+    • Earn a random amount of cash ranging from <b class = "automatic">1-100</b>
+  <h4><a href = "/doc">Back to Documentation</a></h4>
+{% endblock %}
